@@ -11,3 +11,9 @@ if(empty($_SESSION['logged_in']))
 <a href="odjava.php">        <div class="">
 <b>Izpiši me</b>
         </div></a>
+
+        <br /> <br />
+
+        <a href="kreirajNovoDatoteko.php">
+          <b> kreirajNovoDatoteko </b>
+        </a>
