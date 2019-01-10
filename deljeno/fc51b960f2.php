@@ -1,0 +1,3 @@
+PrvaVrsticaDatoteke
+Druga
+Vrstica
