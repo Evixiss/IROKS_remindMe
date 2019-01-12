@@ -1,11 +1,18 @@
 <html>
-<body>
-  <head>
+<head>
+  <title>
+    RemindMe &mdash; Prijavljen
+  </title>
 <?php include("web/styleLinks.php"); ?>
-<title>
-  RemindMe &mdash; Projekt
-</title>
+<style>
+.stopar1 {
+margin: auto;
+width: 50%;
+}
+
+</style>
 </head>
+<body>
 
   <div class="site-wrap">
 
@@ -38,7 +45,7 @@
                           <li>
                             <a href="index.php">Indeks</a>
                           </li>
-                          <li class="has-children active">
+                          <li class="has-children">
                             <a href="oNasemProjektu.php">O nas</a>
                             <ul class="dropdown arrow-top">
                             <li><a href="oNasemProjektu.php">O projektu</a></li>
@@ -48,14 +55,11 @@
     <?php
     session_start();
     if(empty($_SESSION['logged_in'])){
-      echo '<li><a href="prijava.php">Prijava</a></li>';
-      echo '<li><a href="registracija.php">Registracija</a></li>';
-
+      header("Location: index.php");
     }
     else {
-    echo '<li><a href="prijavljen.php">Pregled seznamov</a></li>';
+    echo '<li class="active"><a href="prijavljen.php">Pregled seznamov</a></li>';
 echo '<li><a href="mojRacun.php">Moj račun</a></li>';
-
       echo '<li><a href="odjava.php">Odjava</a></li>';
     }
     ?>
@@ -76,50 +80,21 @@ echo '<li><a href="mojRacun.php">Moj račun</a></li>';
             <div class="container">
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-7 text-center" data-aos="fade">
-                  <h1>O projektu <strong>RemindMe!</strong></h1>
+                  <h1><strong>Pregled seznamov</strong></h1>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-<!-- Content -->
-<div class="site-block-half d-flex">
-  <div class="image bg-image order-2" style="background-image: url('web/images/php-logo-png-transparent.png');"></div>
-  <div class="text">
-    <div class="section-heading text-left">
-      <h2 class="mb-5">Naloga #1</h2>
-      <p>Sprva nam je bila naloga, da smo se odločili v katerem programskem jeziku bomo programirali. Odločili smo se za PHP in MySQL, saj smo ga precej dobro spoznali in se dan danes v industriji zelo uporablja.</p>
-    </div>
-  </div>
-</div>
-<div class="site-block-half d-flex">
-  <div class="image bg-image" style="background-image: url('web/images/funkcijonalnosti.jpg');"></div>
-  <div class="text">
-    <div class="section-heading text-left">
-      <h2 class="mb-5">Naloga #2</h2>
-      <p>Po tem ko je asistent vse naše ideje odobril smo se lotili dela.</p>
-      <p>Iziv, ki smo ga morali opraviti je bil, da smo vzpostavili projekt in naredili nekaterih osnovnih strani in začeli delati na funkcijonalnostih, ki smo jih opisali pred začetkom projekta.</p>
-    </div>
-  </div>
-</div>
-<div class="site-block-half d-flex">
-  <div class="image bg-image order-2" style="background-image: url('web/images/hero_bg_3.jpg');"></div>
-  <div class="text">
-    <div class="section-heading text-left">
-      <h2 class="mb-5">Naloga #3</h2>
-      <p>Stran smo morali preurediti tako, da je bila uporabniku prijazna, saj nihče ne bi uporabljal naše storitve, če bi se zgubljal v nepreglednih tabelah in obrazcih. To nam je vzelo največ časa ampak smo sedaj srečni z našim delom. </p>
-    </div>
-  </div>
-</div>
 
-
-
-</div>
 
 <?php
 include("sharedPageContent/footer.php");
-include("web/scriptLinks.php");
-?>
+ ?>
+
+  </div>
+
+<?php include("web/scriptLinks.php") ?>
 </body>
 </html>

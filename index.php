@@ -48,8 +48,8 @@ width: 50%;
                           <li class="has-children">
                             <a href="oNasemProjektu.php">O nas</a>
                             <ul class="dropdown arrow-top">
-                            <li><a href="projekt/oNasemProjektu.php">O projektu</a></li>
-                            <li><a href="projekt/oEkipi.php">O ekipi</a></li>
+                            <li><a href="oNasemProjektu.php">O projektu</a></li>
+                            <li><a href="oEkipi.php">O ekipi</a></li>
                           </ul>
                         </li>
     <?php
@@ -60,6 +60,9 @@ width: 50%;
 
     }
     else {
+    echo '<li><a href="prijavljen.php">Pregled seznamov</a></li>';
+echo '<li><a href="mojRacun.php">Moj račun</a></li>';
+
       echo '<li><a href="odjava.php">Odjava</a></li>';
     }
     ?>
@@ -121,7 +124,7 @@ width: 50%;
             <span class="flaticon-paper-plane display-3 mb-3 d-block text-primary"></span>
             <h2 class="h5 text-uppercase">Problem</h2>
             <p>Zagotovo ste se kam odpravili in ste nato, ko ste prispeli na cilj ugotovili, da vam nekaj manjka. Naša naloga je da se to nebi zgodilo.</p>
-            <p><a href="oNasemProjektu.php">Read More <span class="icon-arrow-right small"></span></a></p>
+            <p><a href="oNasemProjektu.php">Preberite več <span class="icon-arrow-right small"></span></a></p>
           </div>
           <div class="text-center p-4 item">
             <span class="flaticon-avatar display-3 mb-3 d-block text-primary"></span>
@@ -149,7 +152,7 @@ width: 50%;
           </div>
 
 <br />
-            <p><a href="#">Read More <span class="icon-arrow-right small"></span></a></p>
+            <p><a href="oEkipi.php">Preberite več <span class="icon-arrow-right small"></span></a></p>
           </div>
         </div>
         </div>

@@ -3,8 +3,17 @@
   <head>
 <?php include("web/styleLinks.php"); ?>
 <title>
-  RemindMe &mdash; Projekt
+  RemindMe &mdash; Ekipa
 </title>
+<style>
+.person2{
+  width: 300px;
+  height: 300px;
+}
+.odmikOdSlike{
+  padding-left: 15px;
+}
+</style>
 </head>
 
   <div class="site-wrap">
@@ -76,7 +85,7 @@ echo '<li><a href="mojRacun.php">Moj račun</a></li>';
             <div class="container">
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-7 text-center" data-aos="fade">
-                  <h1>O projektu <strong>RemindMe!</strong></h1>
+                  <h1>O ekipi, ki stoji za <strong>RemindMe!</strong></h1>
                 </div>
               </div>
             </div>
@@ -84,38 +93,49 @@ echo '<li><a href="mojRacun.php">Moj račun</a></li>';
         </div>
 
 <!-- Content -->
-<div class="site-block-half d-flex">
-  <div class="image bg-image order-2" style="background-image: url('web/images/php-logo-png-transparent.png');"></div>
-  <div class="text">
-    <div class="section-heading text-left">
-      <h2 class="mb-5">Naloga #1</h2>
-      <p>Sprva nam je bila naloga, da smo se odločili v katerem programskem jeziku bomo programirali. Odločili smo se za PHP in MySQL, saj smo ga precej dobro spoznali in se dan danes v industriji zelo uporablja.</p>
-    </div>
+
+          <div class="col-md-8 ml-auto">
+<div class="d-flex block-testimony stopar1">
+  <div class="person2">
+    <img src="web/images/3.jpg" alt="Image" class="img-fluid rounded-circle">
+  </div>
+  <div class="stopar1"><br />
+    <h2 class="h5"><strong>Nejc Vnuk</strong> <br /> OFR</h2>
+<div class="odmikOdSlike">
+    <p>Mlad razvijalec, ki je svoje življenje posvetil igranju nogometa in razvijanju kvalitetne programske kode. <br /><br/ ><b>Naloge pri projektu:</b></p>
+    <ul style="list-style-type: none;">
+      <li>Dodajanje, urejanje in brisanje novega seznama.</li>
+      <li>Dodajanje, urejanje in brisanje stvari na seznamu.</li>
+    </ul>
+  </div>
   </div>
 </div>
-<div class="site-block-half d-flex">
-  <div class="image bg-image" style="background-image: url('web/images/funkcijonalnosti.jpg');"></div>
-  <div class="text">
-    <div class="section-heading text-left">
-      <h2 class="mb-5">Naloga #2</h2>
-      <p>Po tem ko je asistent vse naše ideje odobril smo se lotili dela.</p>
-      <p>Iziv, ki smo ga morali opraviti je bil, da smo vzpostavili projekt in naredili nekaterih osnovnih strani in začeli delati na funkcijonalnostih, ki smo jih opisali pred začetkom projekta.</p>
-    </div>
-  </div>
 </div>
-<div class="site-block-half d-flex">
-  <div class="image bg-image order-2" style="background-image: url('web/images/hero_bg_3.jpg');"></div>
-  <div class="text">
-    <div class="section-heading text-left">
-      <h2 class="mb-5">Naloga #3</h2>
-      <p>Stran smo morali preurediti tako, da je bila uporabniku prijazna, saj nihče ne bi uporabljal naše storitve, če bi se zgubljal v nepreglednih tabelah in obrazcih. To nam je vzelo največ časa ampak smo sedaj srečni z našim delom. </p>
+
+<br />
+
+<div class="col-md-8 ml-auto">
+  <div class="d-flex block-testimony stopar1">
+    <div class="person2">
+      <img src="web/images/1.jpg" alt="Image" class="img-fluid rounded-circle">
+    </div>
+    <div class="stopar1"><br />
+      <h2 class="h5"><strong>Primož Stopar</strong> <br /> Vodja projekta</h2>
+      <div class="odmikOdSlike">
+        <p>Mlad razvijalec, katerega največje veselje je izpolniti zahteve njegovih uporabnikov in jim olajšati delo z njegovimi rešitvami. <br /> <br/ ><b>Naloge pri projektu:</b></p>
+        <ul style="list-style-type: none;">
+          <li>Registracija in prijava v sistem.</li>
+          <li>Deljenje seznama z nekom ki še nima računa.</li>
+          <li>Pošiljanje epošte ob registraciji in deljenju seznama.</li>
+          <li>Urejanje uporabniškega računa.</li>
+          <li>Pozabljeno Geslo.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
-
-
-</div>
+<br />
 
 <?php
 include("sharedPageContent/footer.php");

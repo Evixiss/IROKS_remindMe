@@ -61,8 +61,8 @@ include("web/styleLinks.php");
                          <li class="has-children">
                             <a href="oNasemProjektu.php">O nas</a>
                            <ul class="dropdown arrow-top">
-                           <li><a href="projekt/oNasemProjektu.php">O projektu</a></li>
-                           <li><a href="projekt/oEkipi.php">O ekipi</a></li>
+                           <li><a href="oNasemProjektu.php">O projektu</a></li>
+                           <li><a href="oEkipi.php">O ekipi</a></li>
                          </ul>
                        </li>
    <?php

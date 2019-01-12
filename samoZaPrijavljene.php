@@ -17,3 +17,5 @@ if(empty($_SESSION['logged_in']))
         <a href="kreirajNovoDatoteko.php">
           <b> kreirajNovoDatoteko </b>
         </a>
+        <br />
+<a href="funkcije/posljiMail.php">Pošlji mail</a>

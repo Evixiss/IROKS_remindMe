@@ -5,36 +5,6 @@ include("web/styleLinks.php");
 session_start();
 
 
-            $napaka = '<p id="napaka" hidden>Napačni vnosni podatki pri prijavi.</p>';
-         if($_SERVER["REQUEST_METHOD"] == "POST") {
-            // username and password sent from form
-
-
-            $uporabniskoIme = $_POST['email'];
-            $mypassword = $_POST['geslo'];
-
-            $sql = "SELECT id FROM Uporabniki WHERE email = '$uporabniskoIme' and geslo = '$mypassword'";
-            $result = $conn->query($sql);
-            $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-            $count = mysqli_num_rows($result);
-
-            // If result matched $uporabniskoIme and $mypassword, table row must be 1 row
-
-            if($count == 1) {
-              $_SESSION['id_uporabnika'] = $row['id'];
-               $_SESSION['login_user'] = $uporabniskoIme;
-                $_SESSION['logged_in'] = 'YES';
-                $napaka = '<p id="napaka">Prijava je uspešna</p>';
-               // header("location: samoZaPrijavljene.php");
-            }elseif($count<1) {
-               $napaka = '<p id="napaka"><h3 style="color: red;">Napačni vnosni podatki pri prijavi.</h3></p><br />';
-            }
-            else {
-              $napaka = '<p id="napaka"><h3 style="color: red;">Prišlo je do napake na strežniku prosimo poizkusite kasneje</h3></p><br />';
-           }
-         }
-
-
 
 $jeZePrijavlen = "";
 if(!empty($_SESSION['logged_in']))
@@ -50,7 +20,7 @@ $jeZePrijavlen= '<li class="active"><a href="prijava.php">Prijava</a></li>
  ?>
 <html>
 <head>
-  <title>RemindMe &mdash; Prijava</title>
+  <title>RemindMe &mdash; Pozabljeno geslo</title>
 </head>
 <body>
 
@@ -130,7 +100,7 @@ echo $jeZePrijavlen;
                   <div class="container">
                     <div class="row align-items-center justify-content-center">
                       <div class="col-md-7 text-center" data-aos="fade">
-                        <h1><strong>Prijava</strong></h1>
+                        <h1><strong>Pozabljeno geslo</strong></h1>
                       </div>
                     </div>
                   </div>
@@ -142,9 +112,8 @@ echo $jeZePrijavlen;
         <div class="container">
           <div class="row align-items-center">
 
-<!-- Registracija forma -->
             <div class="col-md-12 col-lg-8 mb-5">
-              <form action="prijava.php" method="post" class="p-5 bg-white">
+              <form action="DB_Scripts/pozabljenoGeslo.php" method="post" class="p-5 bg-white">
 
                 <div class="row form-group">
                   <div class="col-md-12">
@@ -156,25 +125,9 @@ echo $jeZePrijavlen;
 
                 <div class="row form-group">
                   <div class="col-md-12">
-                    <label class="font-weight-bold" for="geslo">Geslo</label>
-                    <input type="password" id="geslo" name="geslo" class="form-control" placeholder="Geslo">
-                  </div>
-                </div>
 
-                <!-- <div class="row form-group">
-                  <div class="col-md-12">
-                    <label class="font-weight-bold" for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Say hello to us"></textarea>
-                  </div>
-                </div> -->
-
-                <div class="row form-group">
-                  <div class="col-md-12">
-                    <?php echo $napaka; ?>
-
-                    <input type="submit" value="Prijava" class="btn btn-primary pill px-4 py-2">
+                    <input type="submit" value="Ponastavi geslo" class="btn btn-primary pill px-4 py-2">
                     <br /><br />
-                    <a href="pozabljenoGeslo.php"><label class="font-weight-bold">Pozabljeno Geslo?</label></a>
 
                   </div>
                 </div>

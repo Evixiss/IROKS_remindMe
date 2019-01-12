@@ -8,10 +8,12 @@ $geslo=$_POST["geslo"];
 $sqlStavek = "insert into Uporabniki (ime,priimek,email,geslo) values ('$ime','$priimek','$email','$geslo');";
 
 if ($conn->query($sqlStavek) === TRUE) {
+
+include '../funkcije/posljiMail.php';
 header("Location: ../index.php");
 
 } else {
-    echo "Error: " . $sqlStavek . "<br>" . $conn->error;
+    header('Location: ../napaka.php');
 }
 
 include("zapiranje_povezave_na_bazo.php");
