@@ -26,70 +26,66 @@ width: 50%;
     </div> <!-- .site-mobile-menu -->
 
 
-    <div class="site-navbar-wrap js-site-navbar bg-white">
 
-      <div class="container">
-        <div class="site-navbar bg-light">
-          <div class="py-1">
-            <div class="row align-items-center">
-              <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="index.php">RemindMe!</a></h2>
-              </div>
-              <div class="col-10">
-                <nav class="site-navigation text-right" role="navigation">
-                  <div class="container">
-                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+        <div class="site-navbar-wrap js-site-navbar bg-white">
 
-                    <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li class="active">
-                        <a href="index.html">Home</a>
-                      </li>
-                      <li><a href="sermons.html">Sermons</a></li>
-                      <li class="has-children">
-                        <a href="beliefs.html">Beliefs</a>
-                        <ul class="dropdown arrow-top">
-                          <li><a href="beliefs.html">God</a></li>
-                          <li><a href="beliefs.html">Humanity</a></li>
-                          <li><a href="beliefs.html">Salvation</a></li>
-                          <li class="has-children">
-                            <a href="beliefs.html">Churches</a>
-                            <ul class="dropdown">
-                              <li><a href="beliefs.html">America</a></li>
-                              <li><a href="beliefs.html">Europe</a></li>
-                              <li><a href="beliefs.html">Asia</a></li>
-                              <li><a href="beliefs.html">Africa</a></li>
-
-                            </ul>
-                          </li>
-
-                        </ul>
-                      </li>
-                      <li><a href="events.html">Events</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                    </ul>
+          <div class="container">
+            <div class="site-navbar bg-light">
+              <div class="py-1">
+                <div class="row align-items-center">
+                  <div class="col-2">
+                    <h2 class="mb-0 site-logo"><a href="index.php">RemindMe!</a></h2>
                   </div>
-                </nav>
+                  <div class="col-10">
+                    <nav class="site-navigation text-right" role="navigation">
+                      <div class="container">
+                        <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+                        <ul class="site-menu js-clone-nav d-none d-lg-block">
+                          <li class="active">
+                            <a href="index.php">Indeks</a>
+                          </li>
+                          <li class="has-children">
+                            <a href="oNasemProjektu.php">O nas</a>
+                            <ul class="dropdown arrow-top">
+                            <li><a href="projekt/oNasemProjektu.php">O projektu</a></li>
+                            <li><a href="projekt/oEkipi.php">O ekipi</a></li>
+                          </ul>
+                        </li>
+    <?php
+    session_start();
+    if(empty($_SESSION['logged_in'])){
+      echo '<li><a href="prijava.php">Prijava</a></li>';
+      echo '<li><a href="registracija.php">Registracija</a></li>';
+
+    }
+    else {
+      echo '<li><a href="odjava.php">Odjava</a></li>';
+    }
+    ?>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div style="height: 113px;"></div>
-    <div class="slide-one-item home-slider owl-carousel">
+        <div style="height: 113px;"></div>
+        <div class="slide-one-item home-slider owl-carousel">
 
-      <div class="site-blocks-cover" style="background-image: url(web/images/hero_b1_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-md-7 text-center" data-aos="fade">
-              <h1>Najboljši opomnik <strong>RemindMe!</strong></h1>
+          <div class="site-blocks-cover" style="background-image: url(web/images/hero_b1_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+            <div class="container">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-7 text-center" data-aos="fade">
+                  <h1>Najboljši opomnik <strong>RemindMe!</strong></h1>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
 
     <div class="site-section">
@@ -125,7 +121,7 @@ width: 50%;
             <span class="flaticon-paper-plane display-3 mb-3 d-block text-primary"></span>
             <h2 class="h5 text-uppercase">Problem</h2>
             <p>Zagotovo ste se kam odpravili in ste nato, ko ste prispeli na cilj ugotovili, da vam nekaj manjka. Naša naloga je da se to nebi zgodilo.</p>
-            <p><a href="#">Read More <span class="icon-arrow-right small"></span></a></p>
+            <p><a href="oNasemProjektu.php">Read More <span class="icon-arrow-right small"></span></a></p>
           </div>
           <div class="text-center p-4 item">
             <span class="flaticon-avatar display-3 mb-3 d-block text-primary"></span>
@@ -134,9 +130,9 @@ width: 50%;
 
               <div class="d-flex block-testimony stopar1">
                 <div class="person mr-3">
-                  <img src="web/images/person_1.jpg" alt="Image" class="img-fluid rounded-circle">
+                  <img src="web/images/3.jpg" alt="Image" class="img-fluid rounded-circle">
                 </div>
-                <div><br />
+                <div class="stopar1"><br />
                   <h2 class="h5">Nejc Vnuk <br /> OFR</h2>
                 </div>
             </div>
@@ -145,7 +141,7 @@ width: 50%;
 
             <div class="d-flex block-testimony stopar1">
               <div class="person mr-3">
-                <img src="web/images/person_1.jpg" alt="Image" class="img-fluid rounded-circle">
+                <img src="web/images/1.jpg" alt="Image" class="img-fluid rounded-circle">
               </div>
               <div><br />
                 <h2 class="h5">Primož Stopar <br /> CEO</h2>
@@ -162,7 +158,7 @@ width: 50%;
 
 
 
-    <div class="site-section block-15">
+    <!-- <div class="site-section block-15">
       <div class="container">
         <div class="row">
           <div class="col-md-6 mx-auto text-center mb-5 section-heading">
@@ -275,7 +271,7 @@ width: 50%;
 
 
 
-        </div>
+        </div> -->
 
         <div class="row">
 
@@ -284,95 +280,10 @@ width: 50%;
     </div>
 
 
-    <div class="py-5 quick-contact-info">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <h2><span class="icon-room"></span> Lokacija</h2>
-              <p class="mb-0">Maribor - 2000 <br>  Koroška cesta 46</p>
-            </div>
-          </div>
-          <!-- <div class="col-md-4">
-            <div>
-              <h2><span class="icon-clock-o"></span> Service Times</h2>
-              <p class="mb-0">Wednesdays at 6:30PM - 7:30PM <br>
-              Fridays at Sunset - 7:30PM <br>
-              Saturdays at 8:00AM - Sunset</p>
-            </div>
-          </div> -->
-          <div class="col-md-4">
-            <h2><span class="icon-comments"></span> Kontakt</h2>
-            <p class="mb-0">Email: info@yoursite.com <br>
-            Phone: (00386) 70 123 456 </p>
-          </div>
-        </div>
-      </div>
-    </div>
+<?php
+include("sharedPageContent/footer.php");
+ ?>
 
-
-    <footer class="site-footer">
-      <div class="container">
-
-
-        <div class="row">
-          <div class="col-md-4">
-            <h3 class="footer-heading mb-4 text-white">O nas</h3>
-            <p>Preberite več o nas in naši poti, ki smo jo prehodili čez ta projekt.</p>
-            <p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Approach</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Careers</a></li>
-                  </ul>
-              </div>
-              <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Ministries</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#">Children</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Bible Study</a></li>
-                    <li><a href="#">Church</a></li>
-                    <li><a href="#">Missionaries</a></li>
-                  </ul>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-2">
-            <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
-              <div class="col-md-12">
-                <p>
-                  <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                  <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                  <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                  <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
-
-                </p>
-              </div>
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="icon-heart text-warning" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </footer>
   </div>
 
 <?php include("web/scriptLinks.php") ?>

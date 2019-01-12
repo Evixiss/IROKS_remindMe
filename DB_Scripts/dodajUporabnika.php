@@ -8,7 +8,7 @@ $geslo=$_POST["geslo"];
 $sqlStavek = "insert into Uporabniki (ime,priimek,email,geslo) values ('$ime','$priimek','$email','$geslo');";
 
 if ($conn->query($sqlStavek) === TRUE) {
-echo "Vnos je bil uspešen";
+header("Location: ../index.php");
 
 } else {
     echo "Error: " . $sqlStavek . "<br>" . $conn->error;
