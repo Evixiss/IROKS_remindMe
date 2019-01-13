@@ -84,7 +84,7 @@ echo '<li class="active"><a href="mojRacun.php">Moj račun</a></li>';
         </div>
 
                        <!-- Registracija forma -->
-               <div class="site-section">
+               <div class="site-section bg-light">
                  <div class="container">
                    <div class="row align-items-center">
 

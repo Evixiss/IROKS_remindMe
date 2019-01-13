@@ -1,16 +1,10 @@
 <html>
 <head>
   <title>
-    RemindMe &mdash; Prijavljen
+    RemindMe &mdash; Dodaj seznam
   </title>
-<?php include("web/styleLinks.php"); ?>
-<style>
-.stopar1 {
-margin: auto;
-width: 50%;
-}
-
-</style>
+<?php include("web/styleLinks.php");
+?>
 </head>
 <body>
 
@@ -58,7 +52,11 @@ width: 50%;
       header("Location: index.php");
     }
     else {
-    echo '<li class="active"><a href="prijavljen.php">Pregled seznamov</a></li>';
+    echo '<li class="has-children active"><a href="prijavljen.php">Pregled seznamov</a>
+    <ul class="dropdown arrow-top">
+    <li><a href="dodajSeznam.php">Dodaj seznam</a></li>
+      </ul>
+    </li>';
 echo '<li><a href="mojRacun.php">Moj račun</a></li>';
       echo '<li><a href="odjava.php">Odjava</a></li>';
     }
@@ -80,56 +78,49 @@ echo '<li><a href="mojRacun.php">Moj račun</a></li>';
             <div class="container">
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-7 text-center" data-aos="fade">
-                  <h1><strong>Pregled seznamov</strong></h1>
+                  <h1><strong>Dodaj nov seznam</strong></h1>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Page content -->
+        <div class="site-section bg-light">
+          <div class="container">
+            <div class="row align-items-center">
 
-<div class="site-section container">
-<?php
-include("DB_Scripts/seznami/vsiSeznami.php");
- ?>
+              <div class="col-md-12 col-lg-8 mb-5">
+                <form action="DB_Scripts\seznami\dodajNovSeznam.php" method="post" class="p-5 bg-white">
 
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="nazivSeznama">Naziv seznama</label>
+                          <input type="text" id="nazivSeznama" name="nazivSeznama" class="form-control" placeholder="Naziv seznama" required>
+                           </div>
+                  </div>
 
-
-
-
-
- <div class="site-section bg-light">
-   <div class="container">
-     <div class="row align-items-center">
-
-       <div class="col-md-12 col-lg-8 mb-5">
-         <form action="DB_Scripts\seznami\dodajNovSeznam.php" method="post" class="p-5 bg-white">
-
-           <div class="row form-group">
-             <div class="col-md-12 mb-3 mb-md-0">
-               <label class="font-weight-bold" for="nazivSeznama">Dodaj nov seznam</label>
-                   <input type="text" id="nazivSeznama" name="nazivSeznama" class="form-control" placeholder="Naziv seznama" required>
+                  <!-- <div class="row form-group">
+                    <div class="col-md-12">
+                      <label class="font-weight-bold" for="message">Message</label>
+                      <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Say hello to us"></textarea>
                     </div>
-           </div>
+                  </div> -->
+
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                      <input type="submit" value="Dodaj nov seznam" class="btn btn-primary pill px-4 py-2">
+                    </div>
+                  </div>
 
 
-           <div class="row form-group">
-             <div class="col-md-12">
-               <input type="submit" value="Dodaj nov seznam" class="btn btn-primary pill px-4 py-2">
-             </div>
-           </div>
+                </form>
+              </div>
 
 
-         </form>
-       </div>
-
-
-     </div>
-   </div>
- </div>
-
-</div>
-
+            </div>
+          </div>
+        </div>
 
 <?php
 include("sharedPageContent/footer.php");
@@ -137,9 +128,7 @@ include("sharedPageContent/footer.php");
 
   </div>
 
-<?php include("web/scriptLinks.php") ?>
-
-
-
+<?php include("web/scriptLinks.php");
+ ?>
 </body>
 </html>

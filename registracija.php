@@ -73,7 +73,7 @@ include("web/styleLinks.php");
 
    }
    else {
-     header("Location:samoZaPrijavljene.php");
+     header("Location:prijavljen.php");
    }
    ?>
                        </ul>

@@ -1,8 +1,8 @@
 <?php
 include("povezava_na_bazo.php");
 
-$ime=$_POST["ime"];
-$priimek=$_POST["priimek"];
+$ime=ucfirst(strtolower($_POST["ime"]));
+$priimek=ucfirst(strtolower($_POST["priimek"]));
 $email=$_POST["email"];
 $geslo=$_POST["geslo"];
 $sqlStavek = "insert into Uporabniki (ime,priimek,email,geslo) values ('$ime','$priimek','$email','$geslo');";

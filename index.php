@@ -97,11 +97,8 @@ echo '<li><a href="mojRacun.php">Moj račun</a></li>';
           <div class="col-md-6 mb-5 mb-md-0">
 
               <div class="img-border">
-                <a href="https://vimeo.com/28959265" class="popup-vimeo image-play">
-                  <span class="icon-wrap">
-                    <span class="icon icon-play"></span>
-                  </span>
-                  <img src="web/images/about_3.jpg" alt="" class="img-fluid">
+                <a class="">
+                  <img src="web\images\primerSeznama.JPG" alt="" class="img-fluid">
                 </a>
               </div>
 
